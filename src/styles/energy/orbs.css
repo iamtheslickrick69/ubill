@@ -1,0 +1,38 @@
+
+.energy-orb {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, rgba(59, 130, 246, 0.5), rgba(14, 165, 233, 0.15));
+  transform-origin: center;
+  pointer-events: none;
+  z-index: -1;
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.35);
+}
+
+.energy-orb-green {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, rgba(34, 197, 94, 0.4), rgba(34, 197, 94, 0.1));
+  transform-origin: center;
+  pointer-events: none;
+  z-index: -1;
+  box-shadow: 0 0 25px rgba(34, 197, 94, 0.3);
+}
+
+.energy-orb-yellow {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, rgba(250, 204, 21, 0.4), rgba(250, 204, 21, 0.1));
+  transform-origin: center;
+  pointer-events: none;
+  z-index: -1;
+  box-shadow: 0 0 25px rgba(250, 204, 21, 0.3);
+}
+
+@media (max-width: 768px) {
+  .energy-orb,
+  .energy-orb-green,
+  .energy-orb-yellow {
+    opacity: 0.5;
+  }
+}

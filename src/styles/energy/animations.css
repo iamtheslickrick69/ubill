@@ -1,0 +1,8 @@
+
+.energy-pulse {
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.energy-float {
+  animation: float 3s infinite ease-in-out;
+}

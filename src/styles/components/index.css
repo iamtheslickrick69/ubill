@@ -1,0 +1,5 @@
+
+/* Import all component style files */
+@import './score-circle.css';
+@import './tabs.css';
+@import './buttons.css';

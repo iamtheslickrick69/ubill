@@ -1,0 +1,22 @@
+
+.energy-gradient-bg {
+  background: linear-gradient(-45deg, #3B82F6, #22C55E, #FACC15, #3B82F6);
+  background-size: 400% 400%;
+  animation: gradientBg 15s ease infinite;
+}
+
+.energy-wave-bg {
+  background: linear-gradient(90deg, #3B82F6, #22C55E, #3B82F6);
+  background-size: 200% 100%;
+  animation: wave 10s ease infinite;
+}
+
+.cool-gradient-bg {
+  background: linear-gradient(135deg, #F8FAFC, #F1F5F9);
+}
+
+.energy-tricolor-bg {
+  background: linear-gradient(135deg, #3B82F6, #22C55E, #FACC15);
+  background-size: 200% 200%;
+  animation: gradientBg 10s ease infinite;
+}

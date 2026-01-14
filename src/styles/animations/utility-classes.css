@@ -1,0 +1,129 @@
+
+/* Animation utility classes */
+.animate-float {
+  animation: floatElement 6s ease-in-out infinite;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.5s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-rotate {
+  animation: rotate 20s linear infinite;
+}
+
+.animate-page-entrance {
+  animation: pageEntrance 0.5s ease-out forwards;
+}
+
+.animate-card-appear {
+  animation: cardAppear 0.4s ease-out forwards;
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0)
+  );
+  background-size: 200% 100%;
+}
+
+.animate-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.animate-shine::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 100%
+  );
+  transform: rotate(30deg);
+  animation: shine 3s infinite linear;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+/* Question rotation animations */
+.animate-slide-in-question {
+  animation: slideInQuestion 0.5s ease-out forwards;
+}
+
+.animate-slide-out-question {
+  animation: slideOutQuestion 0.5s ease-out forwards;
+}
+
+/* New shiny effect classes */
+.glitter-text {
+  background: linear-gradient(90deg, #9F9EA1, #C8C8C9, #9F9EA1);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shineGradient 3s linear infinite;
+}
+
+.shine-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine-effect::before {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  height: 300%;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 100%
+  );
+  transform: rotate(30deg);
+  animation: shine 2s ease-in-out infinite;
+}
+
+.metal-shine {
+  animation: metalShine 3s ease-in-out infinite;
+}
+
+.glitter-particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.6;
+  animation: glitter 2s ease-in-out infinite;
+}
+
+.shimmer-gradient {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite ease-in-out;
+}
+
+/* Trophy icon animation */
+.trophy-icon {
+  animation: pulse 2s ease-in-out infinite;
+  color: #F59E0B;
+}

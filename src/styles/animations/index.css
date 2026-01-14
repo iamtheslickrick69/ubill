@@ -1,0 +1,7 @@
+
+/* Import all animation files */
+@import './keyframes.css';
+@import './transitions.css';
+@import './effects.css';
+@import './utility-classes.css';
+@import './ai-animations.css';

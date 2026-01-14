@@ -1,0 +1,265 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* === DARK THEME - APPLE-INSPIRED PALETTE === */
+
+    /* === BACKGROUNDS === */
+    --background: 0 0% 7%;               /* Dark: #121212 */
+    --foreground: 0 0% 95%;              /* Light text: #F2F2F2 */
+
+    /* === CARDS & SURFACES (Glassmorphism) === */
+    --card: 0 0% 10%;                    /* Dark card: #1A1A1A */
+    --card-foreground: 0 0% 95%;
+    --card-glass: 0 0% 10% / 0.72;       /* Frosted glass dark */
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    /* === PRIMARY - Apple Blue === */
+    --primary: 211 100% 50%;             /* Apple Blue: #007AFF */
+    --primary-foreground: 0 0% 100%;
+
+    /* === SECONDARY - Dark Gray === */
+    --secondary: 0 0% 15%;               /* Dark gray: #262626 */
+    --secondary-foreground: 0 0% 95%;
+
+    /* === ACCENT - Apple Green (for success/gamification) === */
+    --accent: 142 71% 45%;               /* Success green: #34C759 */
+    --accent-foreground: 0 0% 100%;
+
+    /* === MUTED ELEMENTS === */
+    --muted: 0 0% 15%;                   /* Dark muted: #262626 */
+    --muted-foreground: 0 0% 60%;        /* Medium gray: #999999 */
+
+    /* === DESTRUCTIVE === */
+    --destructive: 0 100% 59%;           /* Apple Red: #FF3B30 */
+    --destructive-foreground: 0 0% 100%;
+
+    /* === BORDERS === */
+    --border: 0 0% 20%;                  /* Dark border: #333333 */
+    --input: 0 0% 20%;
+    --ring: 211 100% 50%;                /* Apple Blue focus */
+
+    /* === APPLE-SUBTLE RADIUS === */
+    --radius: 0.875rem;                  /* 14px - Apple's signature */
+
+    /* === GAMIFICATION COLORS === */
+    --game-gold: 45 100% 51%;            /* Gold: #FFD60A */
+    --game-orange: 28 100% 50%;          /* Orange: #FF9500 */
+    --game-purple: 280 100% 60%;         /* Purple: #AF52DE */
+    --game-pink: 340 100% 63%;           /* Pink: #FF2D55 */
+    --game-teal: 180 77% 47%;            /* Teal: #1AC8B3 */
+    --game-indigo: 240 60% 60%;          /* Indigo: #5856D6 */
+
+    /* === LEVEL/XP COLORS === */
+    --level-bronze: 30 60% 50%;
+    --level-silver: 0 0% 75%;
+    --level-gold: 45 100% 51%;
+    --level-platinum: 200 20% 80%;
+    --level-diamond: 200 100% 70%;
+
+    /* === SCORE COLORS === */
+    --score-excellent: 142 71% 45%;      /* Green */
+    --score-good: 211 100% 50%;          /* Blue */
+    --score-fair: 45 100% 51%;           /* Gold */
+    --score-poor: 0 100% 59%;            /* Red */
+
+    /* === DARK THEME SPECIFIC === */
+    --dark-bg: 0 0% 7%;                  /* #121212 */
+    --dark-border: 0 0% 20%;             /* #333333 */
+    --dark-card: 0 0% 10%;               /* #1A1A1A */
+
+    /* === GRADIENTS === */
+    --gradient-apple: linear-gradient(135deg, #007AFF 0%, #5856D6 100%);
+    --gradient-gold: linear-gradient(135deg, #FFD60A 0%, #FF9500 100%);
+    --gradient-success: linear-gradient(135deg, #34C759 0%, #30D158 100%);
+    --gradient-hero: linear-gradient(180deg, #000000 0%, #0A0A0A 100%);
+    --gradient-rainbow: linear-gradient(90deg, #FF3B30, #FF9500, #FFD60A, #34C759, #007AFF, #5856D6, #AF52DE);
+  }
+
+  * {
+    @apply border-border;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+    letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    @apply bg-background;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    line-height: 1.5;
+    background-color: #121212;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+  }
+
+  h1 {
+    font-weight: 700;
+    letter-spacing: -0.03em;
+  }
+
+  /* === GLASSMORPHISM UTILITIES === */
+  .glass {
+    background: rgba(26, 26, 26, 0.72);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+  }
+
+  .glass-card {
+    background: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(40px) saturate(150%);
+    -webkit-backdrop-filter: blur(40px) saturate(150%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-dark {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+  }
+
+  /* === APPLE-STYLE GRADIENTS === */
+  .bg-gradient-apple {
+    background: var(--gradient-apple);
+  }
+
+  .bg-gradient-gold {
+    background: var(--gradient-gold);
+  }
+
+  .bg-gradient-success {
+    background: var(--gradient-success);
+  }
+
+  .text-gradient-apple {
+    background: var(--gradient-apple);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .text-gradient-rainbow {
+    background: var(--gradient-rainbow);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  /* === GAMIFICATION ANIMATIONS === */
+  @keyframes celebrate {
+    0%, 100% { transform: scale(1); }
+    10% { transform: scale(1.1) rotate(-3deg); }
+    20% { transform: scale(1.1) rotate(3deg); }
+    30% { transform: scale(1.1) rotate(-3deg); }
+    40% { transform: scale(1.1) rotate(3deg); }
+    50% { transform: scale(1.1); }
+  }
+
+  @keyframes confetti {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
+  }
+
+  @keyframes levelUp {
+    0% { transform: scale(0.5); opacity: 0; }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  @keyframes pulse-ring {
+    0% { transform: scale(0.8); opacity: 1; }
+    100% { transform: scale(1.5); opacity: 0; }
+  }
+
+  @keyframes score-pop {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  .animate-celebrate {
+    animation: celebrate 0.6s ease-in-out;
+  }
+
+  .animate-level-up {
+    animation: levelUp 0.5s ease-out forwards;
+  }
+
+  .animate-score-pop {
+    animation: score-pop 0.4s ease-out forwards;
+  }
+
+  /* === APPLE-STYLE HOVER EFFECTS === */
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+  }
+
+  /* === PROGRESS BAR STYLES === */
+  .progress-bar {
+    background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--game-purple)));
+    border-radius: 9999px;
+    transition: width 0.5s ease;
+  }
+
+  /* === XP BAR === */
+  .xp-bar {
+    background: var(--gradient-gold);
+    border-radius: 9999px;
+    box-shadow: 0 0 10px rgba(255, 214, 10, 0.5);
+  }
+
+  /* === MINIMALISTIC WHITE ICON SYSTEM === */
+  .icon-white {
+    color: white;
+    stroke-width: 1.5px;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
+    transition: all 0.3s ease;
+  }
+
+  .icon-white:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.8));
+  }
+
+  /* === FUTURISTIC GLOW EFFECTS === */
+  .glow-white-sm {
+    filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.4));
+  }
+
+  .glow-white-md {
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6));
+  }
+
+  .glow-white-lg {
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.8));
+  }
+
+  /* === GLOBAL ICON STYLING === */
+  /* Ensure all lucide-react icons have consistent white styling */
+  svg[class*="lucide"] {
+    stroke-width: 1.5px;
+  }
+
+  /* Card and feature icons get white color by default in dark mode */
+  .dark svg[class*="lucide"]:not(.text-primary):not(.text-accent):not(.text-destructive) {
+    color: white;
+  }
+}

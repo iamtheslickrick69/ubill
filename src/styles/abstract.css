@@ -1,0 +1,91 @@
+
+.abstract-shape {
+  backdrop-filter: blur(30px);
+  will-change: transform;
+}
+
+/* Gradient animations */
+@keyframes floatHorizontal {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(30px);
+  }
+}
+
+@keyframes floatVertical {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+}
+
+@keyframes rotateSlowly {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes shine {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+.float-h {
+  animation: floatHorizontal 15s ease-in-out infinite;
+}
+
+.float-v {
+  animation: floatVertical 15s ease-in-out infinite;
+}
+
+.rotate-slow {
+  animation: rotateSlowly 30s linear infinite;
+}
+
+.pulse-glow {
+  animation: pulseGlow 8s ease-in-out infinite;
+}
+
+.animate-shine {
+  animation: shine 2s ease-in-out;
+}
+
+/* Subtle grid pattern */
+.bg-grid-pattern {
+  background-image: linear-gradient(to right, rgba(200, 200, 200, 0.1) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(200, 200, 200, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Gradient backgrounds */
+.bg-gradient-radial {
+  background: radial-gradient(circle, var(--tw-gradient-stops));
+}
+
+.bg-gradient-soft {
+  background: linear-gradient(140deg, #f8fafc 0%, #eff6ff 50%, #f0f9ff 100%);
+}
+
+.soft-glow {
+  box-shadow: 0 0 80px 10px rgba(59, 130, 246, 0.1);
+}
